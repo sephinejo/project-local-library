@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/9ac80604cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Local Library - Admin Dashboard</title>
+  </head>
+  <body class="d-grid">
+    <header class="row py-3 bg-success">
+      <nav class="d-flex justify-content-around">
+        <div class="d-flex align-items-baseline text-light">
+          <h1 class="fs-2 me-3">
+            Local Library&nbsp;&nbsp;<i
+              class="fa-solid fa-book-open-reader"
+            ></i>
+          </h1>
+          <h2 class="fs-6">Admin Dashboard</h2>
+        </div>
+        <div>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <a
+                href="./index.html"
+                class="text-decoration-none text-success fw-bold px-2"
+                >Overall Stats</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="./books.html"
+                class="text-decoration-none text-success fw-bold px-2"
+                >Stats by Book</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="./accounts.html"
+                class="text-decoration-none text-success fw-bold px-2"
+                >Stats by Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container d-grid pt-5">
+      <div class="row column-gap-5">
+        <div class="col-5 card p-0">
+          <div class="card-header fw-bold fs-5 py-3 ps-4">
+            Accounts <span id="accounts-total" class="text-info">(36)</span>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none text-success"
+                >Alston, Kirby</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none text-success"
+                >Ball, Toni</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none text-success"
+                >Banks, Gayle</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none text-success"
+                >Banks, Gayle</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <div class="row row-gap-5">
+            <article class="row card p-0">
+              <h3 class="card-header py-3">Kirby Alston</h3>
+              <p class="p-3 pb-0 m-0 fw-bold">
+                Age: <span class="fw-normal">30</span>
+              </p>
+              <p class="p-3 pb-0 m-0 fw-bold">
+                Company: <span class="fw-normal">MARQET</span>
+              </p>
+              <p class="p-3 pb-0 m-0 fw-bold">
+                Email: <span class="fw-normal">kirby.alston@marqet.net</span>
+              </p>
+              <p class="p-3 pb-0 m-0 fw-bold">
+                Account Created:
+                <span class="fw-normal">Monday, June 6, 2016 3:07 PM</span>
+              </p>
+              <p class="p-3 m-0">
+                Borrowed from the library
+                <span class="text-success fw-bold">25</span> times.
+              </p>
+            </article>
+            <article class="row card p-0">
+              <h3 class="card-header py-3">Books in Possession</h3>
+              <p class="p-3 m-0 fw-bold">
+                nisi ut officia ullamco
+                <span class="fw-normal">by Luz Beach</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
