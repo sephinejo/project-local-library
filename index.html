@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/9ac80604cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Local Library - Admin Dashboard</title>
+  </head>
+  <body class="d-grid">
+    <header class="row py-3 bg-success">
+      <nav class="d-flex justify-content-around">
+        <div class="d-flex align-items-baseline text-light">
+          <h1 class="fs-2 me-3">
+            Local Library&nbsp;&nbsp;<i
+              class="fa-solid fa-book-open-reader"
+            ></i>
+          </h1>
+          <h2 class="fs-6">Admin Dashboard</h2>
+        </div>
+        <div>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <a
+                href="./index.html"
+                class="text-decoration-none text-success px-2"
+                >Overall Stats</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="./books.html"
+                class="text-decoration-none text-success px-2"
+                >Stats by Book</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="./accounts.html"
+                class="text-decoration-none text-success px-2"
+                >Stats by Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container d-grid gap-3 pt-5">
+      <div class="row row-cols-3 column-gap-4 flex-nowrap">
+        <article class="col-5 card p-0">
+          <h3 class="card-header">General Stats</h3>
+          <div class="card-body">
+            <p>
+              There are
+              <span id="books-total" class="text-info fw-bold">100</span>
+              total books at the library.
+            </p>
+            <p>
+              There are
+              <span id="books-borrowed" class="text-info fw-bold">65</span>
+              books currently being borrowed.
+            </p>
+            <p>
+              There are
+              <span id="accounts-registered" class="text-info fw-bold">75</span>
+              accounts registered with the library.
+            </p>
+          </div>
+        </article>
+        <article class="col-5 card p-0">
+          <h3 class="card-header">Most Common Genres</h3>
+          <ul class="list-group list-group-flush p-0">
+            <p class="p-3 m-0">
+              Out of all of the books listed, the following genres are the ones
+              that occurred the most number of times.
+            </p>
+            <li class="list-group-item">
+              Nonfiction <span class="text-info fw-bold">(8)</span>
+            </li>
+            <li class="list-group-item">
+              Historical Fiction <span class="text-info fw-bold">(8)</span>
+            </li>
+            <li class="list-group-item">
+              Thriller <span class="text-info fw-bold">(8)</span>
+            </li>
+          </ul>
+        </article>
+        <div class="col-2 d-grid row-gap-1 p-0 pb-2 overflow-hidden">
+          <span
+            class="row-1 bg-danger text-light px-1 rounded d-inline"
+            style="font-size: 12px; width: 30px"
+          >
+            Ads
+          </span>
+          <div
+            id="carouselAds"
+            class="row carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner p-0">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1679678691010-985ab6b8ff62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446700207-a426bbfb56ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446701521-15a2b0548675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            id="carouselAds"
+            class="row carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner p-0">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1679678691010-985ab6b8ff62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446700207-a426bbfb56ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446701521-15a2b0548675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-3 column-gap-4 flex-nowrap">
+        <article class="col-5 card p-0">
+          <h3 class="card-header">Most Popular Books</h3>
+          <ul class="list-group list-group-flush p-0">
+            <p class="p-3 m-0">
+              Out of all of the books listed, the following are the most
+              popular. This number is generated based on the number of times a
+              book has been taken out.
+            </p>
+            <li class="list-group-item">
+              incididunt nostrud minim
+              <span class="text-info fw-bold">(30 borrows)</span>
+            </li>
+            <li class="list-group-item">
+              culpa do sint <span class="text-info fw-bold">(30 borrows)</span>
+            </li>
+            <li class="list-group-item">
+              ullamco est minim
+              <span class="text-info fw-bold">(29 borrows)</span>
+            </li>
+          </ul>
+        </article>
+        <article class="col-5 card p-0">
+          <h3 class="card-header">Most Popular Authors</h3>
+          <ul class="list-group list-group-flush p-0">
+            <p class="p-3 m-0">
+              Out of all of the books listed, the following authors are the most
+              popular. This number is generated based on the number of times an
+              author's book has been taken out.
+            </p>
+            <li class="list-group-item">
+              Tami Hurst <span class="text-info fw-bold">(30 borrows)</span>
+            </li>
+            <li class="list-group-item">
+              Arnold Marks <span class="text-info fw-bold">(30 borrows)</span>
+            </li>
+            <li class="list-group-item">
+              Matthews Sanders
+              <span class="text-info fw-bold">(29 borrows)</span>
+            </li>
+          </ul>
+        </article>
+        <div class="col-2 d-grid row-gap-1 p-0 pb-2 overflow-hidden">
+          <span
+            class="row-1 bg-danger text-light px-1 rounded d-inline"
+            style="font-size: 12px; width: 30px"
+          >
+            Ads
+          </span>
+          <div
+            id="carouselAds"
+            class="row carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner p-0">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1679678691010-985ab6b8ff62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446700207-a426bbfb56ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446701521-15a2b0548675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            id="carouselAds"
+            class="row carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner p-0">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1679678691010-985ab6b8ff62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446700207-a426bbfb56ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1696446701521-15a2b0548675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Water ads"
+                  class="d-block w-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
