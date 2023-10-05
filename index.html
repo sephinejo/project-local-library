@@ -62,43 +62,37 @@
           <div class="card-body">
             <p>
               There are
-              <span id="books-total" class="text-info fw-bold">100</span>
+              <span id="books-total" class="text-info fw-bold"></span>
               total books at the library.
             </p>
             <p>
               There are
-              <span id="books-borrowed" class="text-info fw-bold">65</span>
+              <span id="books-borrowed" class="text-info fw-bold"></span>
               books currently being borrowed.
             </p>
             <p>
               There are
-              <span id="accounts-registered" class="text-info fw-bold">75</span>
+              <span id="accounts-total" class="text-info fw-bold"></span>
               accounts registered with the library.
             </p>
           </div>
         </article>
         <article class="col-5 card p-0">
           <h3 class="card-header py-3">Most Common Genres</h3>
-          <ul class="list-group list-group-flush p-0">
+          <ul
+            id="most-common-genres-container"
+            class="list-group list-group-flush p-0"
+          >
             <p class="p-3 m-0">
               Out of all of the books listed, the following genres are the ones
               that occurred the most number of times.
             </p>
-            <li class="list-group-item">
-              Nonfiction <span class="text-info fw-bold">(8)</span>
-            </li>
-            <li class="list-group-item">
-              Historical Fiction <span class="text-info fw-bold">(8)</span>
-            </li>
-            <li class="list-group-item">
-              Thriller <span class="text-info fw-bold">(8)</span>
-            </li>
           </ul>
         </article>
         <div class="col-2 d-grid row-gap-1 p-0 pb-2 overflow-hidden">
           <span
             class="row-1 bg-danger text-light px-1 rounded d-inline"
-            style="font-size: 12px; width: 30px"
+            style="font-size: 12px; width: 30px; height: 18px"
           >
             Ads
           </span>
@@ -165,49 +159,34 @@
       <div class="row row-cols-3 column-gap-4 flex-nowrap">
         <article class="col-5 card p-0">
           <h3 class="card-header py-3">Most Popular Books</h3>
-          <ul class="list-group list-group-flush p-0">
+          <ul
+            id="most-popular-books-container"
+            class="list-group list-group-flush p-0"
+          >
             <p class="p-3 m-0">
               Out of all of the books listed, the following are the most
               popular. This number is generated based on the number of times a
               book has been taken out.
             </p>
-            <li class="list-group-item">
-              incididunt nostrud minim
-              <span class="text-info fw-bold">(30 borrows)</span>
-            </li>
-            <li class="list-group-item">
-              culpa do sint <span class="text-info fw-bold">(30 borrows)</span>
-            </li>
-            <li class="list-group-item">
-              ullamco est minim
-              <span class="text-info fw-bold">(29 borrows)</span>
-            </li>
           </ul>
         </article>
         <article class="col-5 card p-0">
           <h3 class="card-header py-3">Most Popular Authors</h3>
-          <ul class="list-group list-group-flush p-0">
+          <ul
+            id="most-popular-authors-container"
+            class="list-group list-group-flush p-0"
+          >
             <p class="p-3 m-0">
               Out of all of the books listed, the following authors are the most
               popular. This number is generated based on the number of times an
               author's book has been taken out.
             </p>
-            <li class="list-group-item">
-              Tami Hurst <span class="text-info fw-bold">(30 borrows)</span>
-            </li>
-            <li class="list-group-item">
-              Arnold Marks <span class="text-info fw-bold">(30 borrows)</span>
-            </li>
-            <li class="list-group-item">
-              Matthews Sanders
-              <span class="text-info fw-bold">(29 borrows)</span>
-            </li>
           </ul>
         </article>
         <div class="col-2 d-grid row-gap-1 p-0 pb-2 overflow-hidden">
           <span
             class="row-1 bg-danger text-light px-1 rounded d-inline"
-            style="font-size: 12px; width: 30px"
+            style="font-size: 12px; width: 30px; height: 18px"
           >
             Ads
           </span>
@@ -282,5 +261,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/home.js"></script>
+    <script src="./src/books.js"></script>
+    <script src="./src/accounts.js"></script>
   </body>
 </html>
