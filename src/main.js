@@ -22,6 +22,14 @@ const accountDataContainer = document.querySelector('#account-data-container');
 fetchBooks();
 fetchAccounts();
 fetchAuthors();
+listMostCommonGenres();
+listMostPopularBooks();
+
+// const books = fetchBooks();
+
+// countBooksBorrowed(books);
+// listMostCommonGenres(books);
+// listMostPopularBooks(books);
 
 async function fetchBooks() {
   try {
@@ -31,9 +39,10 @@ async function fetchBooks() {
     let books = [...data.booksData];
 
     booksTotal ? (booksTotal.textContent = `${books.length}`) : '';
-    countBooksBorrowed(books);
-    listMostCommonGenres(books);
-    listMostPopularBooks(books);
+
+    // countBooksBorrowed(books);
+    // listMostCommonGenres(books);
+    // listMostPopularBooks(books);
 
     return books;
   } catch (err) {
@@ -82,10 +91,11 @@ async function countBooksBorrowed(books) {
   }
 }
 
-async function listMostCommonGenres(books) {
+async function listMostCommonGenres() {
   try {
+    const books = await fetchBooks();
     const genresCount = {};
-    await books.forEach(({ genre }) => {
+    books.forEach(({ genre }) => {
       if (genresCount.hasOwnProperty(genre)) {
         genresCount[genre] += 1;
       } else {
@@ -114,11 +124,12 @@ async function listMostCommonGenres(books) {
   }
 }
 
-async function listMostPopularBooks(books) {
+async function listMostPopularBooks() {
   try {
+    const books = await fetchBooks();
     let topFive = [];
     let topFiveTitles = [];
-    await books.forEach(({ title, borrows }) => {
+    books.forEach(({ title, borrows }) => {
       const currentObj = { title, borrows: borrows.length };
       topFive.push(currentObj);
     });
