@@ -25,24 +25,14 @@ fetchAuthors();
 listMostCommonGenres();
 listMostPopularBooks();
 
-// const books = fetchBooks();
-
-// countBooksBorrowed(books);
-// listMostCommonGenres(books);
-// listMostPopularBooks(books);
-
 async function fetchBooks() {
   try {
-    const res = await fetch('../data/books.json');
+    const res = await fetch('data/books.json');
     const data = await res.json();
 
     let books = [...data.booksData];
 
     booksTotal ? (booksTotal.textContent = `${books.length}`) : '';
-
-    // countBooksBorrowed(books);
-    // listMostCommonGenres(books);
-    // listMostPopularBooks(books);
 
     return books;
   } catch (err) {
@@ -52,7 +42,7 @@ async function fetchBooks() {
 
 async function fetchAccounts() {
   try {
-    const res = await fetch('../data/accounts.json');
+    const res = await fetch('data/accounts.json');
     const data = await res.json();
 
     let accounts = [...data.accountsData];
@@ -69,7 +59,7 @@ async function fetchAccounts() {
 
 async function fetchAuthors() {
   try {
-    const res = await fetch('../data/authors.json');
+    const res = await fetch('data/authors.json');
     const data = await res.json();
 
     let authors = [...data.authorsData];
