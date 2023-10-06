@@ -206,7 +206,7 @@ async function displayAllBooks() {
         } fw-bold p-1 ms-1 rounded'
         style='font-size: 12px'
       >
-        ${book.borrows[0].returned ? 'Returned' : 'LoanedOut'}
+        ${book.borrows[0].returned ? 'Returned' : 'Loaned Out'}
       </span>`;
       booksConainer?.appendChild(li);
     });
